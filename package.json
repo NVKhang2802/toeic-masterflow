@@ -1,9 +1,0 @@
-{
-  "name": "toeic-masterflow",
-  "version": "1.0.0",
-  "description": "TOEIC Speaking and Writing Exam Preparation Suite",
-  "private": true,
-  "scripts": {
-    "start": "serve ."
-  }
-}
