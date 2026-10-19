@@ -192,7 +192,12 @@
   gap: var(--space-xl);
 }
 
-/* Mobile & Tablet Responsiveness */
+/* Mobile Bottom Navigation Bar */
+.mobile-bottom-nav {
+  display: none;
+}
+
+/* Tablet & Mobile Responsiveness */
 @media (max-width: 1024px) {
   .app-header {
     padding: 0 var(--space-md);
@@ -206,17 +211,139 @@
 }
 
 @media (max-width: 768px) {
-  .nav-menu {
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-  .nav-item span {
+  /* Hide crowded top nav menu on mobile */
+  .app-header .nav-menu {
     display: none;
   }
+
+  .app-header {
+    height: 60px;
+    padding: 0 16px;
+  }
+
+  .brand-logo {
+    width: 34px;
+    height: 34px;
+  }
+
+  .brand-logo svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .brand-name {
+    font-size: 1.1rem;
+    letter-spacing: -0.3px;
+  }
+
+  .brand-tag {
+    font-size: 0.65rem;
+  }
+
+  .streak-pill {
+    padding: 4px 10px;
+    font-size: 0.78rem;
+  }
+
+  /* Show Sleek Native Mobile Bottom Navigation Bar */
+  .mobile-bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    background: rgba(15, 23, 42, 0.96);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid var(--border-card);
+    z-index: 999;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 4px;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .bottom-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    color: var(--text-secondary);
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 6px 4px;
+    border-radius: var(--radius-sm);
+    flex: 1;
+    transition: all var(--trans-fast);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .bottom-nav-item svg {
+    width: 20px;
+    height: 20px;
+    opacity: 0.8;
+    transition: all var(--trans-fast);
+  }
+
+  .bottom-nav-item.active {
+    color: var(--accent-cyan);
+    font-weight: 700;
+  }
+
+  .bottom-nav-item.active.nav-writing {
+    color: var(--accent-purple);
+  }
+
+  .bottom-nav-item.active svg {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+
+  /* Layout Spacing on Mobile */
+  .main-content {
+    padding: 14px 12px 84px 12px;
+  }
+
   .grid-2 {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
-  .main-content {
-    padding: var(--space-md);
+
+  /* Timer panel compact on small mobile */
+  .ets-timer-panel {
+    padding: 10px 14px;
+    margin-bottom: 14px;
+  }
+
+  .timer-digits {
+    font-size: 1.85rem;
+  }
+
+  .timer-phase-status {
+    font-size: 0.95rem;
+  }
+
+  /* Typography on mobile */
+  .section-title {
+    font-size: 1.45rem;
+  }
+
+  h1 { font-size: 1.65rem; }
+  h2 { font-size: 1.35rem; }
+  h3 { font-size: 1.15rem; }
+
+  /* Input zoom prevention on iOS devices */
+  input, textarea, select {
+    font-size: 16px !important;
+  }
+
+  /* Ensure buttons have comfortable tap target size */
+  .btn {
+    min-height: 42px;
+    touch-action: manipulation;
   }
 }
+

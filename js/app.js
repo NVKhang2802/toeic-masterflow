@@ -24,7 +24,7 @@ class App {
   }
 
   setupNavigation() {
-    const navItems = document.querySelectorAll(".nav-item");
+    const navItems = document.querySelectorAll(".nav-item, .bottom-nav-item");
     navItems.forEach((item) => {
       item.addEventListener("click", (e) => {
         const view = e.currentTarget.dataset.view;
@@ -45,7 +45,7 @@ class App {
   switchView(viewName) {
     this.currentView = viewName;
 
-    // Update Nav bar
+    // Update Desktop Nav bar
     document.querySelectorAll(".nav-item").forEach((item) => {
       if (item.dataset.view === viewName) {
         item.classList.add("active");
@@ -53,6 +53,16 @@ class App {
         if (viewName === "writing") item.classList.add("nav-writing");
       } else {
         item.classList.remove("active", "nav-speaking", "nav-writing");
+      }
+    });
+
+    // Update Mobile Bottom Nav bar
+    document.querySelectorAll(".bottom-nav-item").forEach((item) => {
+      if (item.dataset.view === viewName) {
+        item.classList.add("active");
+        if (viewName === "writing") item.classList.add("nav-writing");
+      } else {
+        item.classList.remove("active", "nav-writing");
       }
     });
 
