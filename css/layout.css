@@ -213,36 +213,42 @@
 @media (max-width: 768px) {
   /* Hide crowded top nav menu on mobile */
   .app-header .nav-menu {
-    display: none;
+    display: none !important;
   }
 
   .app-header {
-    height: 60px;
-    padding: 0 16px;
+    height: 56px;
+    padding: 0 14px;
+  }
+
+  .brand-section {
+    gap: 8px;
   }
 
   .brand-logo {
-    width: 34px;
-    height: 34px;
+    width: 32px;
+    height: 32px;
   }
 
   .brand-logo svg {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
   }
 
   .brand-name {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     letter-spacing: -0.3px;
+    line-height: 1.1;
   }
 
   .brand-tag {
-    font-size: 0.65rem;
+    font-size: 0.62rem;
   }
 
   .streak-pill {
-    padding: 4px 10px;
-    font-size: 0.78rem;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    white-space: nowrap;
   }
 
   /* Show Sleek Native Mobile Bottom Navigation Bar */
