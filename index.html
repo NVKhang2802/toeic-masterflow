@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOEIC MasterFlow • Ứng Dụng Luyện Thi TOEIC Speaking & Writing Chuẩn ETS</title>
+  <meta name="description" content="Ứng dụng web toàn diện hỗ trợ ôn luyện thi chứng chỉ TOEIC Speaking và Writing theo giáo trình chuẩn Collins và Tomato TOEIC Flow.">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2300d2ff'/><text x='50' y='65' font-size='50' font-family='sans-serif' font-weight='bold' text-anchor='middle' fill='%23000'>T</text></svg>">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Top Navigation Bar -->
+    <header class="app-header">
+      <div class="brand-section">
+        <div class="brand-logo">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/>
+          </svg>
+        </div>
+        <div class="brand-title">
+          <span class="brand-name">TOEIC MasterFlow</span>
+          <span class="brand-tag">Speaking & Writing Studio</span>
+        </div>
+      </div>
+
+      <!-- Main Navigation Menu -->
+      <nav class="nav-menu">
+        <button class="nav-item active" data-view="dashboard" id="nav-dashboard">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+          <span>Tổng Quan</span>
+        </button>
+        <button class="nav-item" data-view="speaking" id="nav-speaking">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/><path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/></svg>
+          <span>Speaking Studio</span>
+        </button>
+        <button class="nav-item" data-view="writing" id="nav-writing">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+          <span>Writing Studio</span>
+        </button>
+        <button class="nav-item" data-view="recipes" id="nav-recipes">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+          <span>Kho Bí Kíp</span>
+        </button>
+        <button class="nav-item" data-view="tests" id="nav-tests">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+          <span>Actual Tests 1–5</span>
+        </button>
+        <button class="nav-item" data-view="tracker" id="nav-tracker">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+          <span>Lộ Trình 4 Tuần</span>
+        </button>
+      </nav>
+
+      <!-- Header Right: Streak Counter -->
+      <div class="header-actions">
+        <div class="streak-pill" id="streak-counter">
+          🔥 Chuỗi 1 ngày
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Dynamic Content Views -->
+    <main class="main-content">
+      <!-- 1. Dashboard View -->
+      <section id="view-dashboard" class="view-section active"></section>
+
+      <!-- 2. Speaking Studio View -->
+      <section id="view-speaking" class="view-section"></section>
+
+      <!-- 3. Writing Studio View -->
+      <section id="view-writing" class="view-section"></section>
+
+      <!-- 4. Recipe & Knowledge Hub View -->
+      <section id="view-recipes" class="view-section"></section>
+
+      <!-- 5. Actual Tests View -->
+      <section id="view-tests" class="view-section"></section>
+
+      <!-- 6. 4-Week Study Tracker View -->
+      <section id="view-tracker" class="view-section"></section>
+    </main>
+
+    <!-- App Footer -->
+    <footer style="border-top:1px solid var(--border-subtle); padding:24px var(--space-xl); text-align:center; color:var(--text-muted); font-size:0.85rem; background:rgba(10, 14, 23, 0.95); margin-top:auto;">
+      <div style="max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+        <div>
+          <strong>TOEIC MasterFlow</strong> • Xây dựng theo tài liệu <em>Collins TOEIC Speaking & Writing</em> & <em>Tomato TOEIC Flow</em>
+        </div>
+        <div style="display:flex; gap:16px;">
+          <span>🎯 Mục tiêu: Level 8 Speaking & Level 9 Writing</span>
+          <span>⚡ ETS Standard Simulation</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Main ES Module Entry Point -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

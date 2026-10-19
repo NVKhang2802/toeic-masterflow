@@ -1,0 +1,173 @@
+export const speakingQuestions = [
+  {
+    id: "spk-q1",
+    type: "read_aloud",
+    part: 1,
+    title: "Question 1: Read a Text Aloud",
+    prepTime: 45,
+    speakTime: 45,
+    scoreMax: 3,
+    category: "Store Announcement",
+    promptText: "Good evening, shoppers! / Thank you for visiting Apex Department Store. / For the next thirty minutes, / we are offering an exclusive flash sale / on all winter apparel, / including coats, scarves, and leather gloves. / Visit our third floor / to take advantage of discounts of up to fifty percent. / Please note that all sale items / are non-refundable. / Thank you for shopping with us, / and have a wonderful evening!",
+    phoneticGuide: "Focus on rising intonation on lists: coats (↗), scarves (↗), and leather gloves (↘). Pause at slashes (/), stress content words like EXCLUSIVE, FLASH SALE, APPAREL.",
+    sampleBand8: "Good evening, shoppers! Thank you for visiting Apex Department Store. For the next thirty minutes, we are offering an exclusive flash sale on all winter apparel, including coats, scarves, and leather gloves. Visit our third floor to take advantage of discounts of up to fifty percent. Please note that all sale items are non-refundable. Thank you for shopping with us, and have a wonderful evening!",
+    modelAnalysis: "Clear enunciation of consonant clusters (/kl/ in 'exclusive', /sk/ in 'scarves'), smooth linking between words ('coats and', 'items are'), and natural pitch modulation."
+  },
+  {
+    id: "spk-q2",
+    type: "read_aloud",
+    part: 1,
+    title: "Question 2: Read a Text Aloud",
+    prepTime: 45,
+    speakTime: 45,
+    scoreMax: 3,
+    category: "Airline & Travel Broadcast",
+    promptText: "May I have your attention, please? / Flight 482 to San Francisco / is now ready for boarding at Gate 14B. / We would like to invite passengers / traveling in First Class / and those requiring special assistance / to board first. / Please ensure that you have / your passport and boarding pass / ready for inspection. / Overhead luggage space is limited, / so please place smaller bags / underneath the seat in front of you. / Thank you for flying with SkyLink Airways.",
+    phoneticGuide: "Pause after question mark and slashes. Rise on 'passport' (↗), fall on 'boarding pass' (↘). Stress: ATTENTION, BOARDING, ASSISTANCE, LIMITED.",
+    sampleBand8: "May I have your attention, please? Flight 482 to San Francisco is now ready for boarding at Gate 14B. We would like to invite passengers traveling in First Class and those requiring special assistance to board first. Please ensure that you have your passport and boarding pass ready for inspection. Overhead luggage space is limited, so please place smaller bags underneath the seat in front of you. Thank you for flying with SkyLink Airways.",
+    modelAnalysis: "Professional announcement cadence, clear distinction between short /i/ and long /i:/ ('seat', 'assistance')."
+  },
+  {
+    id: "spk-q3",
+    type: "describe_picture",
+    part: 2,
+    title: "Question 3: Describe a Picture",
+    prepTime: 30,
+    speakTime: 45,
+    scoreMax: 3,
+    category: "Office Environment",
+    image: "assets/pic_office.svg",
+    promptDescription: "This picture was taken in a modern conference room.",
+    vocabulary: ["presenter", "screen", "conference table", "laptop", "formal attire", "paying attention", "gesturing"],
+    templateOutline: [
+      "1. General overview: 'This picture shows a group of business professionals having a meeting in a conference room.'",
+      "2. Central action: 'On the right side, a man standing up is giving a presentation while gesturing toward a screen with charts.'",
+      "3. Details: 'Several colleagues are seated around the oval table, listening attentively and looking at their laptops.'",
+      "4. Background/Atmosphere: 'In the background, there is a large window with daylight coming through. Overall, the atmosphere appears serious and productive.'"
+    ],
+    sampleBand8: "This picture shows a business meeting taking place in a bright, modern office. In the center, a group of colleagues is seated around a conference table with laptops and documents. On the right, a man in business attire is standing up and delivering a presentation, pointing at a large digital screen displaying bar charts and reports. The other participants are paying close attention to his presentation. In the background, daylight is shining through a large window. Overall, everyone seems focused and deeply engaged in their discussion.",
+    modelAnalysis: "Uses spatial prepositions (in the center, on the right, in the background), present continuous tense accurately (is standing, delivering, shining), and coherent flow from general to specific."
+  },
+  {
+    id: "spk-q4",
+    type: "respond_questions",
+    part: 3,
+    title: "Question 4: Respond to Questions (Survey)",
+    prepTime: 0,
+    speakTime: 15,
+    scoreMax: 3,
+    scenario: "Imagine that an American market research company is conducting a telephone survey about your shopping habits.",
+    promptText: "How often do you go shopping for clothes, and what is your favorite place to shop?",
+    sampleBand8: "I usually go shopping for clothes about once or twice a month, and my favorite place to shop is a local department store downtown because they have a wide variety of brands.",
+    modelAnalysis: "Immediately answers both parts of the prompt (frequency + place) with a concise supporting reason within the 15-second limit."
+  },
+  {
+    id: "spk-q5",
+    type: "respond_questions",
+    part: 3,
+    title: "Question 5: Respond to Questions (Survey)",
+    prepTime: 0,
+    speakTime: 15,
+    scoreMax: 3,
+    scenario: "Telephone survey about shopping habits.",
+    promptText: "When shopping for clothes, do you prefer shopping alone or with friends? Why?",
+    sampleBand8: "I definitely prefer shopping with friends because they can give me honest second opinions on what looks good on me, which helps me make better purchasing decisions.",
+    modelAnalysis: "Clear stance stated upfront ('I definitely prefer...'), backed by an authentic rationale and complete sentence structure."
+  },
+  {
+    id: "spk-q6",
+    type: "respond_questions",
+    part: 3,
+    title: "Question 6: Respond to Questions (Survey)",
+    prepTime: 0,
+    speakTime: 30,
+    scoreMax: 3,
+    scenario: "Telephone survey about shopping habits.",
+    promptText: "What factor is most important to you when choosing an online clothing store: customer reviews, return policy, or price discounts? Why?",
+    sampleBand8: "Among the options mentioned, customer reviews are the most important factor for me. First of all, reviews provide real photos and honest feedback about the fabric quality and true-to-size fitting. Since I cannot physically try on clothes online, reading other buyers' experiences prevents me from ordering the wrong item. Therefore, positive customer ratings give me the highest confidence before placing an order.",
+    modelAnalysis: "Structured answer using cohesive devices ('Among the options...', 'First of all...', 'Since I cannot...', 'Therefore...'). Elaborates well for 30 seconds."
+  },
+  {
+    id: "spk-q7",
+    type: "respond_with_info",
+    part: 4,
+    title: "Question 7: Questions Using Information (Schedule)",
+    prepTime: 30,
+    speakTime: 15,
+    scoreMax: 3,
+    scheduleTitle: "Global Marketing Summit 2026 - Schedule of Events",
+    scheduleData: [
+      { time: "09:00 AM - 10:00 AM", event: "Keynote Address: Digital Transformation in 2026", speaker: "Dr. Evelyn Vance", room: "Grand Ballroom A" },
+      { time: "10:15 AM - 11:45 AM", event: "Workshop: AI Tools for Social Media Campaigns", speaker: "Marcus Lee", room: "Room 204" },
+      { time: "12:00 PM - 01:30 PM", event: "Networking Luncheon & Product Showcase", speaker: "All Attendees", room: "Garden Terrace" },
+      { time: "01:45 PM - 03:15 PM", event: "Panel Discussion: Sustainable Brand Strategies", speaker: "Elena Rostova & Panel", room: "Grand Ballroom B" },
+      { time: "03:30 PM - 05:00 PM", event: "Closing Remarks & Certificate Awarding", speaker: "Conference Board", room: "Grand Ballroom A" }
+    ],
+    promptText: "Could you tell me what time the keynote address starts, and who will be delivering it?",
+    sampleBand8: "Certainly! The keynote address is scheduled to start at 9:00 AM in Grand Ballroom A, and it will be delivered by Dr. Evelyn Vance.",
+    modelAnalysis: "Direct, courteous answer with accurate prepositions of time ('at 9:00 AM') and place ('in Grand Ballroom A')."
+  },
+  {
+    id: "spk-q8",
+    type: "respond_with_info",
+    part: 4,
+    title: "Question 8: Questions Using Information (Correction)",
+    prepTime: 0,
+    speakTime: 15,
+    scoreMax: 3,
+    scheduleTitle: "Global Marketing Summit 2026 - Schedule of Events",
+    promptText: "I heard that the networking luncheon will be held in Grand Ballroom A. Is that correct?",
+    sampleBand8: "Actually, no. According to the schedule, the networking luncheon and product showcase will take place on the Garden Terrace from 12:00 PM to 1:30 PM, not in Grand Ballroom A.",
+    modelAnalysis: "Polite correction ('Actually, no. According to the schedule...'), correct location and timing provided without hesitation."
+  },
+  {
+    id: "spk-q9",
+    type: "respond_with_info",
+    part: 4,
+    title: "Question 9: Questions Using Information (Details/Summary)",
+    prepTime: 0,
+    speakTime: 30,
+    scoreMax: 3,
+    scheduleTitle: "Global Marketing Summit 2026 - Schedule of Events",
+    promptText: "I am particularly interested in the afternoon sessions after lunch. Can you give me the full details of all sessions taking place after 1:30 PM?",
+    sampleBand8: "Sure, there are two sessions scheduled for the afternoon. First, from 1:45 PM to 3:15 PM, there is a panel discussion on Sustainable Brand Strategies led by Elena Rostova and the panel in Grand Ballroom B. After that, from 3:30 PM to 5:00 PM, the Closing Remarks and Certificate Awarding will be conducted by the Conference Board in Grand Ballroom A.",
+    modelAnalysis: "Lists both items chronologically using clear transitions ('First, from...', 'After that, from...'), covers all details (time, event, speaker, room)."
+  },
+  {
+    id: "spk-q10",
+    type: "propose_solution",
+    part: 5,
+    title: "Question 10: Propose a Solution (Voicemail)",
+    prepTime: 30,
+    speakTime: 60,
+    scoreMax: 5,
+    scenario: "Telephone complaint regarding a conference room booking.",
+    audioTranscript: "Hi, this is Arthur Pendelton from Apex Consulting. I made a reservation three weeks ago for Conference Room B for our quarterly client presentation tomorrow at 10:00 AM with twenty executive guests. However, I just received an automated notice saying our room was double-booked by the HR department for recruitment interviews. This client meeting is crucial for our annual contract, and all other large rooms are occupied. Please call me back at 555-0192 with a solution as soon as possible.",
+    templateSteps: [
+      "Step 1: Greeting & acknowledge problem ('Hello Mr. Pendelton, this is [Name] returning your call regarding the double-booking of Conference Room B...')",
+      "Step 2: Empathize & apologize ('I completely understand how important tomorrow's client presentation is for Apex Consulting, and I sincerely apologize for the inconvenience...')",
+      "Step 3: Propose 2 concrete solutions ('To resolve this, I have arranged two options: First, we can upgrade you to our Executive Boardroom on the 10th floor free of charge. Second, I spoke with HR, and they are willing to relocate their interviews to smaller seminar rooms...')",
+      "Step 4: Action & closing ('I will personally supervise the setup tomorrow morning. Please let me know which option you prefer. Thank you.')"
+    ],
+    sampleBand8: "Hello Mr. Pendelton, this is Kevin from the facility management office returning your voicemail regarding the room booking conflict for your client presentation tomorrow at 10:00 AM. First of all, I sincerely apologize for this scheduling error. I completely understand how crucial this twenty-person presentation is for your firm. To fix this immediately, I have arranged two solutions for you. First, I can upgrade your team to our Executive Boardroom on the tenth floor at no extra charge; it has premium audiovisual equipment and comfortable seating for up to twenty-five guests. Alternatively, I have contacted HR, and they agreed to move their interviews to our smaller seminar suites so you can retain Conference Room B. Please call me back to confirm which setup you prefer. We will make sure everything runs smoothly tomorrow.",
+    modelAnalysis: "4-step structure strictly followed, empathetic and professional tone, provides realistic and actionable solutions."
+  },
+  {
+    id: "spk-q11",
+    type: "express_opinion",
+    part: 6,
+    title: "Question 11: Express an Opinion",
+    prepTime: 15,
+    speakTime: 60,
+    scoreMax: 5,
+    promptText: "Do you agree or disagree with the following statement? 'It is more effective for companies to promote current employees to managerial positions than to hire experienced managers from outside.' Support your opinion with specific reasons and examples.",
+    templateSteps: [
+      "1. Clear thesis statement: 'I strongly agree with the idea that promoting existing employees is more beneficial...'",
+      "2. Reason 1 + Explanation: 'They are already familiar with the company culture, operations, and team dynamics...'",
+      "3. Reason 2 + Example: 'It boosts employee morale and loyalty when workers see a clear career progression path...'",
+      "4. Conclusion: 'For these reasons, promoting from within is a far superior strategy for long-term growth.'"
+    ],
+    sampleBand8: "In my opinion, I strongly agree with the statement that companies should promote existing employees to managerial positions rather than hiring outside managers. I feel this way for two main reasons. First and foremost, internal employees already have deep familiarity with company culture, internal workflows, and team strengths. This means they require minimal onboarding time and can maintain workflow continuity without disruptions. For example, in my previous company, our team leader was promoted from a senior developer, and he understood all project challenges right away. Secondly, offering internal promotions significantly boosts morale and retention across the workforce. When employees witness clear pathways for upward mobility, they are much more motivated to perform at their best and stay loyal to the company. Therefore, promoting from within yields greater long-term success.",
+    modelAnalysis: "Cohesive introduction, two well-elaborated arguments with personal example, strong concluding summary within 60 seconds."
+  }
+];

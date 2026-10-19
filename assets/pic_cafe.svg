@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cafeBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#292524"/>
+      <stop offset="100%" stop-color="#1c1917"/>
+    </linearGradient>
+    <linearGradient id="counterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#78350f"/>
+      <stop offset="100%" stop-color="#451a03"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#cafeBg)"/>
+
+  <!-- Menu Board on Wall -->
+  <rect x="180" y="40" width="240" height="140" rx="6" fill="#0c0a09" stroke="#d97706" stroke-width="3"/>
+  <text x="300" y="70" text-anchor="middle" fill="#fbbf24" font-family="sans-serif" font-weight="bold" font-size="18">CAFE MENU</text>
+  <line x1="200" y1="90" x2="400" y2="90" stroke="#78716c" stroke-width="1"/>
+  <text x="200" y="115" fill="#f5f5f4" font-family="sans-serif" font-size="13">Espresso ................. $3.50</text>
+  <text x="200" y="135" fill="#f5f5f4" font-family="sans-serif" font-size="13">Latte / Cappuccino ... $4.50</text>
+  <text x="200" y="155" fill="#f5f5f4" font-family="sans-serif" font-size="13">Fresh Pastries ........ $3.00</text>
+
+  <!-- Espresso Machine -->
+  <rect x="520" y="160" width="160" height="120" rx="8" fill="#64748b" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="560" cy="190" r="14" fill="#38bdf8"/>
+  <circle cx="600" cy="190" r="14" fill="#10b981"/>
+  <rect x="540" y="230" width="30" height="40" fill="#334155"/>
+  <rect x="610" y="230" width="30" height="40" fill="#334155"/>
+
+  <!-- Bar Counter -->
+  <rect x="120" y="270" width="680" height="230" fill="url(#counterGrad)" stroke="#92400e" stroke-width="2"/>
+
+  <!-- Pastry Display Glass Case -->
+  <polygon points="140,270 320,270 300,200 160,200" fill="#38bdf8" opacity="0.25" stroke="#7dd3fc" stroke-width="2"/>
+  <!-- Croissants & Muffins -->
+  <circle cx="200" cy="245" r="14" fill="#d97706"/>
+  <circle cx="240" cy="245" r="14" fill="#b45309"/>
+  <circle cx="275" cy="245" r="12" fill="#d97706"/>
+
+  <!-- Barista behind counter -->
+  <circle cx="580" cy="110" r="28" fill="#fed7aa"/>
+  <!-- Barista Apron -->
+  <path d="M 540 270 L 540 180 C 540 145, 620 145, 620 180 L 620 270 Z" fill="#15803d"/>
+  <rect x="560" y="145" width="40" height="45" fill="#f8fafc"/>
+
+  <!-- Customer in Foreground (Left) -->
+  <circle cx="80" cy="280" r="32" fill="#fdba74"/>
+  <path d="M 20 480 C 20 370, 140 370, 140 480 Z" fill="#0284c7"/>
+  <!-- Hand paying credit card -->
+  <line x1="120" y1="360" x2="200" y2="330" stroke="#fdba74" stroke-width="12" stroke-linecap="round"/>
+  <rect x="195" y="320" width="35" height="22" rx="3" fill="#fbbf24"/>
+
+  <!-- Coffee Cups on Counter -->
+  <path d="M 400 240 L 415 270 L 385 270 Z" fill="#f8fafc"/>
+  <rect x="385" y="235" width="30" height="6" rx="2" fill="#ef4444"/>
+
+  <!-- Caption -->
+  <rect x="0" y="460" width="800" height="40" fill="#000000" opacity="0.6"/>
+  <text x="400" y="485" text-anchor="middle" fill="#fbbf24" font-family="sans-serif" font-weight="600" font-size="16">
+    SCENE 2: Coffee Shop Counter & Barista Service
+  </text>
+</svg>
